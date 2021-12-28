@@ -1,0 +1,11 @@
+.sendEmailMessage{
+    margin: 5%;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+}
+@media only screen and (max-width:500px) {
+    .sendEmailMessage{
+        font-size: 0.7rem;
+    }
+}

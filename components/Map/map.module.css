@@ -1,0 +1,23 @@
+
+.mapContainer{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.cancelMapPage{
+    width: 10%;
+    height: 10%;
+    color: #ffb326;
+    background-color: rgba(0, 0, 0, 0.781);
+    border-color: transparent;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    z-index: 30;
+    cursor: pointer;
+}
+.backIcon{
+    height: 100%;
+    width: 100%;
+}

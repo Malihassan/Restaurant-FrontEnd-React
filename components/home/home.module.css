@@ -1,0 +1,157 @@
+.MainContainer {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  /* bottom: 0%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 0;
+}
+.bgOverlay {
+  background-image: url("../../assets/Home2.jpg");
+  background-size: cover;
+  background-position-y: center;
+  position: relative;
+  top: 0%;
+  width: 100%;
+  height: 400px;
+  /* background-color: rgba(0, 0, 2, 0.829); */
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 2, 0.466);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headerData {
+  width: 80%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 50px;
+}
+.headerData label {
+  width: 70%;
+  height: 60%;
+  font-size: 1.5rem;
+  color: white;
+  border-bottom: 2px solid #ffb326;
+  border-right: 2px solid #ffb326;
+  /* align-self: flex-end; */
+}
+.headerData button {
+  width: 40%;
+  height: 25%;
+  margin-top: 5%;
+  background-color: #ffb326;
+  color: white;
+  border: none;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 600;
+  font-size: 0.9rem;
+  /* align-self: flex-end; */
+}
+.homeList {
+  margin: 30px;
+  width: 95%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.customerReviews {
+  background: url("../../assets/reviews.jpg") no-repeat center;
+  border-radius: 10px;
+  background-size: cover;
+  background-position-y: center;
+  width: 89%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.customerReviewsLayout {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.39);
+}
+.test {
+  position: relative;
+  max-width: 70%;
+  height: 78%;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.664);
+}
+
+.titleReviews {
+  height: 20%;
+  width: 100%;
+  color: white;
+  font-size: 1.6rem;
+  font-family: "Cinzel", serif;
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.previousButton,
+.nextButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 42px;
+  height: 42px;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+.previousButton {
+  left: -2px;
+  background: url("../../assets/PrevArrow.png") no-repeat center center / 26px;
+}
+.previousButton:hover {
+  left: -10px;
+}
+
+.nextButton {
+  right: 0;
+  background: url("../../assets/nextArrow.png") no-repeat center center / 26px;
+}
+.nextButton:hover {
+  right: -8px;
+}
+
+@media only screen and (min-width: 500px) {
+  .headerData {
+    width: 60%;
+  }
+  .headerData label {
+    font-size: 2rem;
+  }
+  .headerData button {
+    letter-spacing: 3px;
+  }
+  .titleReviews {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .headerData {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .headerData {
+    width: 40%;
+  }
+  .headerData label {
+    width: 60%;
+  }
+}

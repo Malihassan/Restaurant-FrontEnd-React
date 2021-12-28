@@ -1,0 +1,60 @@
+.gander{
+    margin-right: 5%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+
+}
+.loginLink {
+    color: white;
+    align-self: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.loginLink span {
+    color:  #ffb326;
+} 
+
+
+@media only screen and (max-width: 400px) {
+    .gander{
+        font-size: 0.6rem;
+    }
+    .gander input[type=radio] {
+        height: 60%;
+      }
+    .loginLink{
+        font-size: 0.6rem;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .gander{
+        font-size: 0.7rem;
+    }
+    .gander input[type=radio] {
+        height: 70%;
+      }
+}
+@media only screen and (min-width: 500px) {
+    .gander{
+        font-size: 0.9rem;
+    }
+    .loginLink{
+        font-size: 0.7rem;
+    }
+    
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 600px) {
+    .rememberContainer{
+        font-size: 0.8rem;
+        
+    }
+    
+      
+} 

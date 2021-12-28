@@ -1,0 +1,162 @@
+.main{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* z-index: 20; */
+    background: url(../../assets/res2.jpg)no-repeat center fixed;
+    background-size: cover;
+    background-position-y: center;
+    
+    /* opacity: 0.6; */
+}
+.mainOverlay{
+    width: 100%;
+    height: 100%;
+    background-color: #1616166c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(96, 96, 129);
+    background-color: rgba(18, 18, 51, 0.623);
+    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+    border-radius: 5px;
+    margin-top: 5%;
+
+}
+
+.formtitle {
+    font-family: sans-serif;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 10px;
+}
+.form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.accountInputStyle {
+    width: 90%;
+    margin: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid  #ffb326;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: white;
+
+}
+.accountInputStyle::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+.invalidMessage{
+    align-self: center;
+    color: red  ;
+    margin-bottom: 0px;
+    margin-top: 0px;
+
+}
+.responseMessage{
+    align-self: center;
+    color:  #ffb326;
+    font-weight: 600;
+    /* margin-left: 5%; */
+    margin-bottom: 0px;
+    margin-top: 15px;
+}
+  .buttonContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3%;
+    padding-top: 3%;
+}
+  .button{
+    width: 100%;
+    margin-top: 2%;
+    padding: 2%;
+    background-color:  #ffb326;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    font-size: 1rem;
+    /* font-weight: 600; */
+
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        width: 50%;
+    }
+    .formtitle {
+        font-size: 1.2rem;
+    }
+    .accountInputStyle{
+        font-size: 0.7rem;
+    }
+    .button{
+        font-size: 0.8rem;
+    }
+    .responseMessage{
+        font-size: 0.7rem;
+    }
+
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 600px) {
+    .container{
+        width: 50%;
+    }
+    .formtitle {
+        font-size: 1.2rem;
+    }
+
+    .responseMessage{
+        font-size: 0.9rem;
+    }
+} 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .container{
+        width: 40%;
+    }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .container{
+        width: 40%;
+    }
+    .formtitle {
+        font-size: 1.8rem;
+    }
+
+} 
+@media only screen and (min-width: 800px) {
+    .container{
+        width: 30%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .container{
+        width: 25%;
+    }
+
+} 

@@ -1,0 +1,57 @@
+
+
+.details{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}   
+.rate {
+    color: white;
+}
+.Gallery_Name {
+    font-family: "Source Code Pro", monospace;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    color: white;
+    align-self: flex-start;
+
+
+}
+.priceContainer{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.Gallery_Discount_Price {
+    font-family: cursive;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    color: red;
+}
+.price{
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    
+}
+@media only screen and (min-width: 400px) {
+   .Gallery_Name{
+    font-size: 0.9rem;
+   }
+   .Gallery_Discount_Price{
+    font-size: 0.9rem;
+   }
+}
+@media only screen and (min-width: 500px) {
+    .Gallery_Name{
+     font-size: 80%;
+    }
+ }
+ @media only screen and (min-width: 800px) {
+
+    .Gallery_Name{
+     font-size: 90%;
+    }
+ }

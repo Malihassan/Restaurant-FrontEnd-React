@@ -1,0 +1,21 @@
+.item{
+    border-bottom: 1px solid #acacac;
+    margin: 0px 10px 10px 10px;
+    padding: 10px 10px 15px 10px;
+}
+.name{
+    color: #acacac;
+}
+.itemInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+.price{
+    font-weight: bold;
+    color: white;
+}
+.quantity{
+    color: white;
+}

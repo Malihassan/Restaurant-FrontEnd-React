@@ -1,0 +1,147 @@
+.continer{
+    width: 70%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.header{
+    font-family: "Source Code Pro", monospace;
+    height: 20%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:10px 20px 10px 10px;
+    margin-left: 8px;
+    border-bottom: 1px solid #ffb326;
+
+}
+.id span{
+    color: #ffb326;
+    font-size: 1rem;
+
+    font-weight: 900;
+}
+.id{
+    font-size: 0.8rem;
+    color: #acacac;
+    margin: 3px;
+}
+.date{
+    font-size: 0.6rem;
+
+    color: #acacac;
+}
+.items {
+    max-height: 60%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: "Source Code Pro", monospace;
+    overflow-y: auto;
+}
+.orderInfo{
+    height: 22%;
+    width: 95%;
+    margin-left: 8px;
+    /* border: 1px solid #ffb326; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Source Code Pro", monospace;
+
+}
+.totalPriceAndCount{
+    height: 100%;
+    width: 50%;
+    color: #acacac;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.countItems {
+    margin-bottom: 10px;
+    margin-left: 5px;
+    font-size: 0.8rem;
+}
+.countItems span {
+    border: 1px solid #acacac ;
+    border-radius: 2px;
+    color: #ffb326;
+    padding: 3px;
+}
+.price {
+    font-weight: bold;
+    color: #ffb326;
+    margin-left: 5px;
+    font-size: 0.8rem;
+}
+.btnReview{
+    margin-right: 20px;
+    margin-bottom: 8px;
+    padding: 8px 10px 8px 10px;
+    font-size: 0.8rem;
+    background-color: transparent;
+    border: 1px solid #acacac;
+    color: #ffb326;
+    font-weight: 700;
+    font-family: "Source Code Pro", monospace;
+    border-radius: 4px;
+}
+.btnReview:hover {
+    border: none;
+    background-color: #ffb326;
+    color: white;    
+}
+
+
+
+/* width */
+.items::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  .items::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 3px #ffb326;  */
+    /* border-color: #ffb326; */
+    /* border: 1px solid #ffb326; */
+    border-radius: 55px;
+  }
+  
+  /* Handle */
+  .items::-webkit-scrollbar-thumb {
+    background: #ffb326;
+    border-radius: 55px;
+  }
+
+  @media only screen and (min-width:400px){
+    .id span{
+        font-size: 1.2rem;
+    }
+    .id{
+        font-size: 0.9rem;
+    }
+    .date{
+        font-size: 0.7rem;
+    }
+    .countItems {
+        font-size: 0.8rem;
+    }
+    .price {
+        font-size: 1rem;
+    }
+    .btnReview{
+        padding: 13px 25px 13px 25px;
+        font-size: 1rem;
+
+    }
+
+  }
+  @media only screen and (min-width:700px){
+      .continer{
+          width: 35%;
+      }
+  }

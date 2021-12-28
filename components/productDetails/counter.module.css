@@ -1,0 +1,52 @@
+
+.divCounter {
+  height: 15%;
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.summary {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+  
+  .price {
+    font-weight: 500;
+    color: #8a2b06;
+    margin-right: 5px;
+  }
+  
+  .amount {
+    font-weight: bold;
+    border: 1px solid rgb(87, 87, 87);
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    color: #363636;
+  }
+
+  
+  
+  .counterActions {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+  }
+  .counterActions button {
+    width: 40%;
+    background-color: #ffb326;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10%;
+    text-align: center;
+  }
+
+ 

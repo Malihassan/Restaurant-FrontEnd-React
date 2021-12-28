@@ -1,0 +1,112 @@
+
+.mainContainer {
+  margin-top: 5px;
+  width: 100%;
+  position: relative;
+}
+.mainContainerDimention {
+  padding-bottom: 5rem;
+}
+.buttonContainer {
+  height: 90%;
+  width: 100%;
+  margin-right: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+.button {
+  height: 100%;
+  /* padding: 5px 0px 5px 5px; */
+  background-color: transparent;
+  border-color: transparent;
+}
+.button div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.button span {
+  height: 20%;
+  width: 100%;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 600;
+  color: white;
+}
+.iconButton {
+  height: 50%;
+  width: 20%;
+  align-items: center;
+  margin: 8px;
+  color: #ffb326;
+  cursor: pointer;
+}
+.categoriesContiner {
+  width: 100%;
+  height: 85%;
+  position: absolute;
+  top: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* flex-direction: ; */
+  justify-content: space-around;
+  align-items: center;
+  background-color: transparent;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  /* border: 1px solid red; */
+}
+.directionButton {
+  height: 30%;
+  background-color: white;
+  border-color: transparent;
+  border-radius: 5px;
+  opacity: 0.5;
+
+}
+.previous {
+  position: absolute;
+  left: 3%;
+  z-index: 5;
+}
+.next {
+  position: absolute;
+  right: 3%;
+  z-index: 5;
+}
+.next:hover ,.previous:hover{
+  opacity: 1;
+}
+
+.icon {
+  vertical-align: middle;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* width */
+.card::-webkit-scrollbar {
+  height: 6px;
+}
+
+/* Track */
+.card::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 3px #ffb326;  */
+  /* border-color: #ffb326; */
+  /* border: 1px solid #ffb326; */
+  border-radius: 55px;
+}
+
+/* Handle */
+.card::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 55px;
+}

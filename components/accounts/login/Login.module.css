@@ -1,0 +1,77 @@
+.rememberContainer{
+    display: flex;
+    justify-content: space-around;
+    padding: 3%;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.rememberMe {
+    color: white;
+    display: flex;
+  } 
+  .rememberMe input[type=checkbox] {
+    height: 85%;
+    margin-left: 0px;
+  }
+
+.link{
+    color: white;
+}
+.createAcount {
+    align-self: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.createAcount span {
+    color:  #ffb326;
+} 
+.signInWithGamil{
+    width: 95%;
+}
+
+@media only screen and (max-width: 500px) {
+    .rememberContainer{
+        font-size: 0.5rem;
+    }
+    .rememberMe {
+        margin-left: 0px;
+    } 
+    .rememberMe input[type=checkbox] {
+        height: 60%;
+    }
+    .createAcount{
+        font-size: 0.6;
+    }
+}
+@media only screen and (min-width: 500px) {
+    .rememberContainer{
+        font-size: 0.7rem;
+    }
+    
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 600px) {
+    .rememberContainer{
+        font-size: 0.8rem;
+        
+    }
+    .rememberMe input[type=checkbox] {
+        height: 70%;
+      }
+    .rememberMe {
+        color: white;
+        display: flex;
+        margin-right: 5%;
+      } 
+      
+} 
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .rememberContainer{
+        font-size: 0.8rem;
+    }
+
+} 

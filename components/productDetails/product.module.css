@@ -1,0 +1,82 @@
+.container {
+  top: 28vh;
+  left: 15%;
+  right: 15%;
+}
+
+.item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.orderImage {
+  width: 100%;
+  height: 8rem;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  margin: 5px;
+
+  /* margin-left: 5px;
+  margin-right: 7px; */
+}
+
+.orderData {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.orderName {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: black;
+  font-family: "Source Code Pro", monospace;
+  font-size: 1rem;
+  font-weight: 600;
+  align-self: center;
+}
+
+.orderDesc {
+  height: auto;
+    font-family: "Source Code Pro", monospace;
+  color: black;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  font-size: 0.8rem;
+}
+
+
+
+@media only screen and (min-width : 500px) {
+  .container{
+    top: 28vh;
+    left: 13%;
+    right: 13%;
+  }
+  .item{
+    flex-direction: row ;
+  }
+  .orderImage{
+    width: 45%;
+    height: 10rem;    
+  }
+}
+@media only screen and (min-width :700px) {
+  .container{
+    top: 20vh;
+    left: 23%;
+    right: 23%;
+  }
+}
+@media only screen and (min-width :900px) {
+  .container{
+    top: 27vh;
+    left: 28%;
+    right: 28%;
+  }
+}
