@@ -2,7 +2,7 @@ import MainNavigation from "../ui/header/MainNavigation";
 import classes from "./Layout.module.css";
 import Category from "../category/Category";
 import { useSelector } from "react-redux";
-import BookTable from "../BookTable/BookTable";
+import BookTable from "../booktable/BookTable";
 import ProductDetails from "../productDetails/ProductDetails";
 import Cart from "../cart/Cart";
 import { Fragment } from "react";
@@ -34,7 +34,7 @@ function Layout(props) {
       <MainNavigation className={classes.header} />
       {toggleCategory && <Category />}
       {toggleCart && <Cart />}
-      {/* {toggleReservedTablePage && <BookTable/>} */}
+      {toggleReservedTablePage && <BookTable/>}
       <main className={classes.main}>{props.children}</main>
     </div>
   );
