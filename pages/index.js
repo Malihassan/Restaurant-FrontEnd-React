@@ -1,13 +1,13 @@
-import dynamic from 'next/dynamic'
-import { Fragment} from "react";
+import dynamic from "next/dynamic";
+import Head from "next/head";
+import { Fragment } from "react";
 import { useDispatch } from "react-redux";
 import { categoryAction } from "../Store/category";
 import LoadingSpinner from "../components/ui/spinner/LoadingSpinner";
 
-const Home = dynamic(
-  () => import('../components/home/home'),
-  { loading: () => <LoadingSpinner className="LoadingSpinner" /> }
-)
+const Home = dynamic(() => import("../components/home/home"), {
+  loading: () => <LoadingSpinner className="LoadingSpinner" />,
+});
 
 const HomePage = (props) => {
   const slides = [
@@ -50,7 +50,16 @@ const HomePage = (props) => {
 
   return (
     <Fragment>
-        <Home slides={slides} categoryList={props.categories.slice(0, 3)} />
+      <Head>
+        <title>El-Hendawy Restaurant</title>
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="The Elhendawy was founded in 1996 by momen and alhendawy . the taste
+            of an excellent meat dish."
+        />
+      </Head>
+      <Home slides={slides} categoryList={props.categories.slice(0, 3)} />
     </Fragment>
   );
 };

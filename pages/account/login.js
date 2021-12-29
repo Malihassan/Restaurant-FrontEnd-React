@@ -1,6 +1,7 @@
-import cookie from "cookie";
+import Head from "next/head";
 import dynamic from "next/dynamic";
 import LoadingSpinner from "../../components/ui/spinner/LoadingSpinner";
+import { Fragment } from "react";
 
 const LoginForm =dynamic(
   () => import("../../components/accounts/login/LoginForm"),
@@ -8,7 +9,12 @@ const LoginForm =dynamic(
 );
 
 function LoginPage() {
-  return <LoginForm  />;
+  return <Fragment>
+    <Head>
+        <title>Login Page</title>
+      </Head>
+    <LoginForm  />
+  </Fragment>
 }
 
 

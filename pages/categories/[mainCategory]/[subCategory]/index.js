@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import Head from "next/head";
 import LoadingSpinner from "../../../../components/ui/spinner/LoadingSpinner";
 
 const ProductItem = dynamic(
@@ -32,7 +33,15 @@ function SubCategoryPage(props) {
       />
     ));
   }
-  return <div className="gallery">{gallery}</div>;
+  return (
+    <div className="gallery">
+      <Head>
+        <title>{`Category of ${props.category} `}</title>
+        <meta name="description" content={props.description}></meta>
+      </Head>
+      {gallery}
+    </div>
+  );
 }
 export async function getStaticPaths() {
   const categoriesResponse = await fetch(
@@ -54,11 +63,14 @@ export async function getStaticPaths() {
       },
     })),
     fallback: false,
+
   };
 }
 export async function getStaticProps(context) {
   const { mainCategory, subCategory } = context.params;
   const productResponse = await fetch(
+    //http://localhost:7000/
+    //https://alhendawy-node-server.herokuapp.com/
     `https://alhendawy-node-server.herokuapp.com/ElhendawyRestaurant/menu/${mainCategory}/${subCategory}`,
     {
       method: "GET",
@@ -69,10 +81,9 @@ export async function getStaticProps(context) {
     }
   );
   const productItems = await productResponse.json();
-
   return {
     props: {
-      products: productItems.map((item) => ({
+      products: productItems.items.map((item) => ({
         productId: item._id.toString(),
         name: item.ProductName,
         price: item.Size.Price,
@@ -81,6 +92,8 @@ export async function getStaticProps(context) {
         description: item.Describe,
         rate: item.Rate,
       })),
+      description:productItems.description,
+      category:subCategory,
     },
   };
 }

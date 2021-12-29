@@ -1,4 +1,5 @@
 import cookie from "cookie";
+import Head from "next/head";
 import dynamic from "next/dynamic";
 import LoadingSpinner from "../../components/ui/spinner/LoadingSpinner";
 
@@ -30,6 +31,13 @@ const MyOrders = (props) => {
   ));
   return (
     <div className="orderHistory">
+      <Head>
+        <title>Order History</title>
+        <meta
+          name="description"
+          content=" All Excellent Order Dish that you Deliver ."
+        />
+      </Head>
       {ordersContent}
     </div>
   );

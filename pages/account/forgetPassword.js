@@ -1,4 +1,6 @@
 import dynamic from "next/dynamic";
+import Head from "next/head";
+import { Fragment } from "react";
 import LoadingSpinner from "../../components/ui/spinner/LoadingSpinner";
 const ForgetPass =dynamic(
   () => import("../../components/accounts/forgetPassword/forgetPass"),
@@ -7,6 +9,14 @@ const ForgetPass =dynamic(
 
 
 function forgetPassword(props) {
-  return <ForgetPass />;
+  return (
+    <Fragment>
+      <Head>
+        <title>Forget Password</title>
+      </Head>
+      <ForgetPass />
+    </Fragment>
+  )
+  
 }
 export default forgetPassword;
