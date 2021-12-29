@@ -34,7 +34,7 @@ function Layout(props) {
       <MainNavigation className={classes.header} />
       {toggleCategory && <Category />}
       {toggleCart && <Cart />}
-      {toggleReservedTablePage && <BookTable />}
+      {/* {toggleReservedTablePage && <BookTable/>} */}
       <main className={classes.main}>{props.children}</main>
     </div>
   );
