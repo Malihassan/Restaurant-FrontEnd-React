@@ -48,3 +48,9 @@ a {
 .LoadingSpinner{
   margin-top: 4%;
 }
+
+/*
+"dev": "next dev",
+    "build": "next build",
+    "lint": "next lint",
+*/
