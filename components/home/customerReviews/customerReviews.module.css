@@ -1,35 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Inconsolata:wght@300&family=Licorice&family=Major+Mono+Display&family=Nunito:wght@600&family=Rubik:ital,wght@1,300&family=Source+Code+Pro:ital,wght@1,300&family=Space+Mono&display=swap');
-.container{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Inconsolata:wght@300&family=Licorice&family=Major+Mono+Display&family=Nunito:wght@600&family=Rubik:ital,wght@1,300&family=Source+Code+Pro:ital,wght@1,300&family=Space+Mono&display=swap");
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.userName{
-    font-size: 1.5rem;
-    color: white;
-    margin-top: 10px;
-    font-family: 'Licorice', cursive;
+.userName {
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 10px;
+  font-family: "Licorice", cursive;
 }
-.comment{
-    width: 80%;
-    font-size: 1.1rem;
-    color: white;
-    margin-left: 15px;
-    font-family: 'Inconsolata', monospace;
+.comment {
+  width: 80%;
+  font-size: 1.1rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-left: 15px;
+  font-family: "Inconsolata", monospace;
 }
 
-@media only screen and (min-width:500px){
-    .userName{
-    font-size: 1rem;
-
-    }
-    .comment{
-        font-size: 1.1rem;
-
-    }
+@media only screen and (min-width: 500px) {
+  .userName {
+    font-size: 2rem;
+  }
+  .comment {
+    font-size: 1.4rem;
+  }
 }

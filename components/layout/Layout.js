@@ -5,36 +5,38 @@ import { useSelector } from "react-redux";
 import BookTable from "../booktable/BookTable";
 import ProductDetails from "../productDetails/ProductDetails";
 import Cart from "../cart/Cart";
-import { Fragment } from "react";
 function Layout(props) {
   const toggleCart = useSelector((state) => state.cart_ui.toggleCart);
   const ProductDetailsPage = useSelector((state) => state.productDetails_ui);
   const toggleReservedTablePage = useSelector(
     (state) => state.bookedTable_ui.showPage
   );
-  let shareContent = true ,toggleCategory = true ;
-  const pageName =props.children.type.name
-  if ( pageName == "LoginPage" || pageName == "SignupPage"|| pageName == 'forgetPassword') {
-    shareContent = false
+  let toggleCategory = true;
+  const pageName = props.children.type.name;
+    console.log(pageName);
+  if (
+    pageName == "HomePage" ||
+    pageName == "LoginPage" ||
+    pageName == "SignupPage" ||
+    pageName == "forgetPassword"
+  ) {
+    toggleCategory = false;
   }
-  if (pageName == "HomePage" || pageName == "LoginPage" || pageName == "SignupPage"|| pageName == 'forgetPassword'  ) {
-    toggleCategory = false
-  }
+  console.log(toggleCategory);
+  const productDetailsPage = ProductDetailsPage.togglePage && (
+    <ProductDetails
+      key={ProductDetailsPage.item.productId}
+      item={ProductDetailsPage.item}
+    />
+  );
   return (
     <div className={classes.layout}>
-      {shareContent &&<Fragment>        
-        {ProductDetailsPage.togglePage && (
-          <ProductDetails
-            key={ProductDetailsPage.item.productId}
-            item={ProductDetailsPage.item}
-          />
-        )}
-      </Fragment>}
+      {productDetailsPage}
 
       <MainNavigation className={classes.header} />
       {toggleCategory && <Category />}
       {toggleCart && <Cart />}
-      {toggleReservedTablePage && <BookTable/>}
+      {toggleReservedTablePage && <BookTable />}
       <main className={classes.main}>{props.children}</main>
     </div>
   );

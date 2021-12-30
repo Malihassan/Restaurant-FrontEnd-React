@@ -52,7 +52,6 @@ const HomePage = (props) => {
     <Fragment>
       <Head>
         <title>El-Hendawy Restaurant</title>
-        <link rel="shortcut icon" href="/favicon.ico" />
         <meta
           name="description"
           content="The Elhendawy was founded in 1996 by momen and alhendawy . the taste
