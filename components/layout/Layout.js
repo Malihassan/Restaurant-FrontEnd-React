@@ -11,30 +11,21 @@ function Layout(props) {
   const toggleReservedTablePage = useSelector(
     (state) => state.bookedTable_ui.showPage
   );
-  let toggleCategory = true;
-  const pageName = props.children.type.name;
-    console.log(pageName);
-  if (
-    pageName == "HomePage" ||
-    pageName == "LoginPage" ||
-    pageName == "SignupPage" ||
-    pageName == "forgetPassword"
-  ) {
-    toggleCategory = false;
-  }
-  console.log(toggleCategory);
+
+
   const productDetailsPage = ProductDetailsPage.togglePage && (
     <ProductDetails
       key={ProductDetailsPage.item.productId}
       item={ProductDetailsPage.item}
     />
   );
+
   return (
     <div className={classes.layout}>
       {productDetailsPage}
 
       <MainNavigation className={classes.header} />
-      {toggleCategory && <Category />}
+      {/* {toggleCategory && <Category />} */}
       {toggleCart && <Cart />}
       {toggleReservedTablePage && <BookTable />}
       <main className={classes.main}>{props.children}</main>

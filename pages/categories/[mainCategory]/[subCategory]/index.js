@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import Category from "../../../../components/category/Category";
 import LoadingSpinner from "../../../../components/ui/spinner/LoadingSpinner";
 
 const ProductItem = dynamic(
@@ -39,6 +40,7 @@ function SubCategoryPage(props) {
         <title>{`Category of ${props.category} `}</title>
         <meta name="description" content={props.description}></meta>
       </Head>
+      <Category />
       {gallery}
     </div>
   );
