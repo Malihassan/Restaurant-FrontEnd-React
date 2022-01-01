@@ -27,19 +27,24 @@ function Cart(props) {
   const toggleMapHandeler =()=>{
     setToggleMap((prev) =>prev =!prev)
   }
+  let selectedCheckbox =false;
   const checkboxReceiveOrder = (e) =>{
     if (e.target.checked) {
       location =[]
+      selectedCheckbox = true ;
     }
   }
-
   const sendOrderHandeler = async() => {
     if (!auth) {
       hideCartHandeler()
       router.push('/account/login')
     }
-    
+
     location = location.lat =='' ?[]:location;
+    if (!location.length && !selectedCheckbox )  {
+      setResponseMessage('Should Choose location or Recive order from restaurant')
+      return 
+    }    
     await sendRequest({
       url:'https://alhendawy-node-server.herokuapp.com/ElhendawyRestaurant/sendOrder',
       method:'POST',

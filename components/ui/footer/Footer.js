@@ -68,7 +68,7 @@ function SubScribe(props) {
         <div className={classes.logoContainer}>
           <span className={classes.logo}>El-HENDAWY.</span>
           <p className={classes.aboutRestauran}>
-            The Elhendawy was founded in 1996 by momen and alhendawy . the taste
+            The Elhendawy was founded in 1996 by momen alhendawy . the taste
             of an excellent meat dish.
           </p>
           <div className={classes.buttonContainer}>

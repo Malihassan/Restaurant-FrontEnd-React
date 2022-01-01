@@ -44,7 +44,7 @@ function ForgetPass(props) {
   async function redirectionHandler(response) {
     if (response.ok) {
       emailResetStates();
-      setResponseMessage("Seccess Send Order");
+      setResponseMessage("Check Your Email");
     }
     if (response.status == 500) {
       setResponseMessage("Server Error");
