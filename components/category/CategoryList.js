@@ -8,7 +8,7 @@ const CategoryList = (props) => {
         selectedStyle = classes.selectedCategory
     }
   return (
-    <div className={`${classes.list} ${selectedStyle}`} onClick={forwardToCategoryHandler}>
+    <div className={`${classes.list}`} onClick={forwardToCategoryHandler}>
       <div className={classes.imageContainer}>
         <img src={props.cloudImage} />
       </div>

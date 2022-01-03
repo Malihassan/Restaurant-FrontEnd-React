@@ -7,15 +7,19 @@ import { useSelector } from "react-redux";
 import CategoryList from "./CategoryList";
 const Category = (props) => {
   const [toggleCategory, setToggleCategory] = useState(false);
-  let scrollRef = useRef()
+  let scrollRef = useRef();
   const toggleHandler = () => {
     setToggleCategory((prev) => !prev);
   };
-  const scroll = (scrollOffset) => {
-    scrollRef.current.scrollLeft += scrollOffset;
-
+  const scrollRight = () => {
+    scrollRef.current.scrollLeft += 80;
   };
-  
+  const scrollLeft = () => {
+    // scrollRef.current.scrollLeft -= 100;
+    scrollRef.current.scrollLeft = -5;
+    console.log(scrollRef.current.scrollLeft);
+  };
+
   const categories = useSelector((state) => state.category.categories);
   return (
     <div
@@ -42,20 +46,26 @@ const Category = (props) => {
 
       {toggleCategory && (
         <div className={classes.categoriesContiner}>
-          <button onClick={() => scroll(80)} className={`${classes.next} ${classes.directionButton}`}>
+          <button
+            onClick={() => scrollRight()}
+            className={`${classes.next} ${classes.directionButton}`}
+          >
             <GrNext className={classes.icon} />
           </button>
           <Card className={`${classes.card}`} ref={scrollRef}>
-            {categories.map((element) => (
-              <CategoryList
-                key={element.subCategory}
-                cloudImage={element.cloudImage}
-                subCategryName={element.subCategory}
-                category={element.category}
-              />
-            ))}
+              {categories.map((element) => (
+                <CategoryList
+                  key={element.subCategory}
+                  cloudImage={element.cloudImage}
+                  subCategryName={element.subCategory}
+                  category={element.category}
+                />
+              ))}
           </Card>
-          <button onClick={() => scroll(-80)} className={`${classes.previous} ${classes.directionButton}`}>
+          <button
+            onClick={() => scrollLeft()}
+            className={`${classes.previous} ${classes.directionButton}`}
+          >
             <GrPrevious className={classes.icon} />
           </button>
         </div>
