@@ -25,7 +25,7 @@ function Home(props) {
           </div>
         </div>
       </div>
-      <ul className={classes.homeList}>
+      <div className={classes.homeList}>
         {props.categoryList.map((item) => (
           <HomeList
             key={item.key}
@@ -35,7 +35,7 @@ function Home(props) {
             description={item.description}
           />
         ))}
-      </ul>
+      </div>
       <div className={classes.customerReviews}>
         <div className={classes.customerReviewsLayout}>
           <label className={classes.titleReviews}>Customer Reviews</label>

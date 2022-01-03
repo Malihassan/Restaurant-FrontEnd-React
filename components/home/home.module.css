@@ -56,12 +56,13 @@
   font-size: 0.9rem;
   /* align-self: flex-end; */
 }
+
 .homeList {
-  margin: 30px;
-  width: 95%;
+  margin: 30px 0px 30px 0px;
+  width: 90%;
   display: flex;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -88,6 +89,11 @@
   overflow: hidden;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.664);
+}
+@media only screen and (max-width:500px){
+  .test{
+    max-width: 85%;
+  }
 }
 
 .titleReviews {

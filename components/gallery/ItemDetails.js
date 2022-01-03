@@ -16,9 +16,9 @@ function ItemDetails(props) {
       />
       <span className={classes.Gallery_Name}>{props.name}</span>
       <div className={classes.priceContainer}>
-        <del
+        {props.oldPrice && <del
           className={classes.Gallery_Discount_Price}
-        >{`EGY ${props.oldPrice}`}</del>
+        >{`EGY ${props.oldPrice}`}</del>}
         <Price price={props.price} className={classes.price}/>
       </div>
     </div>
