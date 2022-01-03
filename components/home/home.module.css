@@ -37,12 +37,12 @@
 }
 .headerData label {
   width: 70%;
-  height: 60%;
+  height: 50%;
+  margin-top: 35px;
   font-size: 1.5rem;
   color: white;
   border-bottom: 2px solid #ffb326;
   border-right: 2px solid #ffb326;
-  /* align-self: flex-end; */
 }
 .headerData button {
   width: 40%;
