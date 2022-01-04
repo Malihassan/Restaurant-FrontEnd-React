@@ -1,8 +1,8 @@
 import classes from "./headerButton.module.css";
-import { BsPerson, BsBagCheck } from "react-icons/bs";
+import { BsPerson, BsBagCheck ,BsChevronDown } from "react-icons/bs";
 import { IoIosLogIn, IoIosLogOut } from "react-icons/io";
 import { RiUserAddLine } from "react-icons/ri";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { accountAction } from "../../../../Store/account";
@@ -10,25 +10,33 @@ function AccountButton() {
   const router = useRouter();
   const dispatch = useDispatch();
   const accountAuth = useSelector((state) => state.account.token);
+  const [hovered, setHovered] = useState(false);
+  const DropMenuHandeler =()=>{
+    // setHovered((prev)=>!prev)
+    setHovered(true)
+  }
 
-  const [openMenu, setOpenMenu] = useState(false);
+  const toogleMenu = ()=>{
+    setHovered(true)
+  }
+  const hiddenMenu = ()=>{
+    setHovered(false)
+  }
 
-  const openMenuHandeler = () => {
-    setOpenMenu(true);
-  };
-  const hideMenuHandeler = () => {
-    setOpenMenu(false);
-  };
   const LoginHandeler = () => {
+    hiddenMenu()
     router.push("/account/login");
   };
   const signUpHandeler = () => {
+    hiddenMenu()
     router.push("/account/signup");
   };
   const MyOrdersHandler =()=>{
+    hiddenMenu()
     router.push('/orderHistory')
   }
   const logoutHandeler = async () => {
+    hiddenMenu()
     const res = await fetch(
       "https://alhendawy-node-server.herokuapp.com/ElhendawyRestaurant/logout",
       {
@@ -46,12 +54,11 @@ function AccountButton() {
     }
   };
 
-  const menuContent = openMenu && (
+  const menuContent = hovered && (
     <div
-      className={classes.dropdown_wrapper}
-      onMouseEnter={openMenuHandeler}
-      onMouseLeave={hideMenuHandeler}
-    >
+      onMouseEnter={toogleMenu}
+      onMouseLeave={hiddenMenu}
+      className={classes.dropdown_wrapper}>
       <ul className={classes.dropdown_menu}>
         {!accountAuth && (
           <button
@@ -93,12 +100,15 @@ function AccountButton() {
     <div className={classes.container}>
       <button
         className={classes.button}
-        onMouseEnter={openMenuHandeler}
-        onMouseLeave={hideMenuHandeler}
+        onMouseEnter={toogleMenu}
+        onMouseLeave={hiddenMenu}
+        onClick={DropMenuHandeler}
       >
         <BsPerson className={classes.icon} />
         <span className={classes.title}>Account</span>
+        <BsChevronDown className={`${classes.dropdownArrow} ${hovered && classes.rotateArrow}`}/>
       </button>
+      
       {menuContent}
     </div>
   );

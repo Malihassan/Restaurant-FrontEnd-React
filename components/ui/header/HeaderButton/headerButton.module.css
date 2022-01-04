@@ -45,6 +45,7 @@
   font-family: "Source Code Pro", monospace;
   font-weight: 700;
 }
+
 .bump {
   animation: bump 300ms ease-out;
 }
@@ -78,7 +79,6 @@
 
   z-index: 1;
   border-radius: 5px;
-
   /* background-color: rgba(255, 255, 255, 0.863); */
 }
 
@@ -108,17 +108,24 @@
 }
 
 .dropdown_menu__button:hover {
-  background-color: rgba(0, 0, 0, 0.14);
+  background-color: rgba(0, 0, 0, 0.356);
   background-color: #ffb326;
-  /* border-bottom: 1px solid #ffb326; */
   cursor: pointer;
-
 }
 .menu_icon {
   width: 1.2rem;
   height: 1.2rem;
   margin-right: 0.5rem;
   color: black;
-  /* border: 2px solid red; */
+
 }
+.dropdownArrow{
+  width: 15px;
+  margin-top: 8px;
+  margin-left: 4px;
+}
+.rotateArrow{
+  transform: rotate(180deg);
+}
+
 
