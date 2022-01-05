@@ -63,8 +63,9 @@ function Cart(props) {
   async function redirectionHandler(response) {
     if (response.ok) {
       setResponseMessage('thank you ,we will calling in three minutes');
-      dispatch(cartActions.clearCart())
+      
       setTimeout(()=>{
+        dispatch(cartActions.clearCart())
         hideCartHandeler()
       },1500)
     }
