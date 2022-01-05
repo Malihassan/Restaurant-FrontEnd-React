@@ -46,7 +46,8 @@
 }
 .headerData button {
   width: 40%;
-  height: 25%;
+  height: 30%;
+  padding: 10px;
   margin-top: 5%;
   background-color: #ffb326;
   color: white;
