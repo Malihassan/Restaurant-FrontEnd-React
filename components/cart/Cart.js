@@ -64,9 +64,6 @@ function Cart(props) {
     if (response.ok) {
       setResponseMessage('thank you ,we will calling in three minutes');
       dispatch(cartActions.clearCart())
-      setTimeout(()=>{
-        hideCartHandeler()
-      },2000)
     }
     if (!response.ok) {
       setResponseMessage('Server Error');
