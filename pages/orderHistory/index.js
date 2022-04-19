@@ -11,24 +11,41 @@ const Card = dynamic(() => import("../../components/ui/card/Card"), {
   loading: () => <LoadingSpinner className="LoadingSpinner" />,
 });
 const MyOrders = (props) => {
-  let ordersContent = "";
-  if (!props.orders.length) {
-    ordersContent = (
+  let ordersContent =
+    props.orders.length === 0 ? (
       <Card className="notFoundItems">
         <span> No Order Yet !!</span>
       </Card>
+    ) : (
+      props.orders.map((item) => (
+        <OrderHistory
+          key={item._id}
+          date={item.Timestamp}
+          totalPayment={item.TotalPaymentPrice}
+          location={item.Location}
+          cart={item.Cart}
+          id={item._id.substring(item._id.length / 2)}
+        />
+      ))
     );
-  }
-  ordersContent = props.orders.map((item) => (
-    <OrderHistory
-      key={item._id}
-      date={item.Timestamp}
-      totalPayment={item.TotalPaymentPrice}
-      location={item.Location}
-      cart={item.Cart}
-      id={item._id.substring(item._id.length / 2)}
-    />
-  ));
+
+  // if (props.orders.length === 0) {
+  //   ordersContent = (
+  //     <Card className="notFoundItems">
+  //       <span> No Order Yet !!</span>
+  //     </Card>
+  //   );
+  // }
+  // ordersContent = props.orders.map((item) => (
+  //   <OrderHistory
+  //     key={item._id}
+  //     date={item.Timestamp}
+  //     totalPayment={item.TotalPaymentPrice}
+  //     location={item.Location}
+  //     cart={item.Cart}
+  //     id={item._id.substring(item._id.length / 2)}
+  //   />
+  // ));
   return (
     <div className="orderHistory">
       <Head>
@@ -57,11 +74,11 @@ export async function getServerSideProps({ req, res }) {
         },
       }
     );
-    if (!res.ok) {
-      return {
-        notFound: true,
-      };
-    }
+    // if (!res.ok) {
+    //   return {
+    //     notFound: true,
+    //   };
+    // }
     const orders = await res.json();
     return {
       props: {
@@ -70,7 +87,9 @@ export async function getServerSideProps({ req, res }) {
     };
   } catch (error) {
     return {
-      notFound: true,
+      props: {
+        orders: [],
+      },
     };
   }
 }
